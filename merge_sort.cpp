@@ -10,28 +10,20 @@ void merge(int *src, int *dst, int left, int mid, int right)
     {
         if (src[i] < src[j])
         {
-            dst[k] = src[i];
-            i += 1;
-            k += 1;
+            dst[k++] = src[i++];
         } else {
-            dst[k] = src[j];
-            j += 1;   
-            k += 1;
+            dst[k++] = src[j++];
         }
     }
 
     while (i < mid)
     {
-        dst[k] = src[i];
-        i += 1;
-        k += 1;
+        dst[k++] = src[i++];
     }
 
     while (j < right)
     {
-        dst[k] = src[j];
-        j += 1;
-        k += 1;
+        dst[k++] = src[j++];
     }
 }
 
